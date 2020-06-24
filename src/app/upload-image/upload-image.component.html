@@ -1,0 +1,31 @@
+<header><h4>Gallery</h4></header>
+
+<div class="control-section">
+  <div class="col-lg-9">
+      <div class="control_wrapper">
+       
+          <div id='dropArea' class='imagepreview'>            
+                  <button class="button" id='dropimage'> <a href="" id='browse'><u>Upload</u></a>
+                </button>
+                  <ejs-uploader #previewupload id='previewfileupload' [asyncSettings]='path'
+                      [dropArea]='dropElement' [allowedExtensions]='allowExtensions' (selected)='onSelect($event)'
+                      (success)='onUploadSuccess($event)' (progress)='onFileUpload($event)' (failure)='onUploadFailed($event)' (removing)='onFileRemove($event)'>
+                  </ejs-uploader>
+              </div>        
+         </div>
+  </div>
+  <div class="col-lg-3 property-section">
+      <div class="property-panel-section">
+          <div class="property-panel-header"></div>
+          <div class="property-panel-content" style='padding-top:25px;'>
+              <div class="e-btn e-css" id="clearbtn" title="Clear All" style="width:130px"></div>
+          </div>
+          <div class="property-panel-content" style='padding-top:25px;'>
+              <div class="e-btn e-css" id="uploadbtn" title="Upload All" style="width:130px"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<footer>
+    <h4>FullStack Challenge 2020</h4>
+  </footer>
